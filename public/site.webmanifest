@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Fyrix",
+  "short_name": "Fyrix",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
