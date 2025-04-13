@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-import Head from "next/head";
 
 const Header = () => {
   const pathname = usePathname();
@@ -16,7 +15,7 @@ const Header = () => {
   const [openIndex, setOpenIndex] = useState(-1);
 
   const navbarToggleHandler = () => setNavbarOpen(!navbarOpen);
-  const handleSubmenu = (index) =>
+  const handleSubmenu = (index: number) =>
     setOpenIndex(openIndex === index ? -1 : index);
 
   useEffect(() => {
@@ -30,43 +29,6 @@ const Header = () => {
 
   return (
     <>
-      {/* SEO Meta Tags */}
-      <Head>
-        <title>Fyrix | Leading Software Development Company</title>
-        <meta
-          name="description"
-          content="Fyrix is a leading software development company based in Coimbatore, offering AI services, web and mobile solutions tailored to your business needs."
-        />
-        <meta
-          name="keywords"
-          content="Fyrix Coimbatore, Coimbatore software company, AI services Coimbatore, web development Coimbatore, mobile app development Coimbatore"
-        />
-        <meta name="author" content="Fyrix Team" />
-        <meta name="robots" content="index, follow" />
-        <meta
-          property="og:title"
-          content="Fyrix Coimbatore | Leading Software Company"
-        />
-        <meta
-          property="og:description"
-          content="Fyrix is a trusted software company in Coimbatore, providing cutting-edge AI, web, and mobile solutions."
-        />
-        <meta property="og:image" content="/images/logo/favicon.svg" />
-        <meta property="og:url" content="https://www.fyrix.tech/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_IN" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Fyrix Coimbatore | Software Development Experts"
-        />
-        <meta
-          name="twitter:description"
-          content="Fyrix, based in Coimbatore, offers top-notch software development, AI, and digital solutions to elevate your business."
-        />
-        <meta name="twitter:image" content="/images/logo/favicon.svg" />
-      </Head>
-
       {/* Header */}
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center ${
