@@ -79,40 +79,40 @@ export const metadata: Metadata = {
   },
 };
 
-// Optional: Include JSON-LD Schema markup for better SEO
-export const structuredData = {
-  __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Fyrix Technologies",
-    url: "https://www.fyrix.tech",
-    logo: "https://www.fyrix.tech/images/logo/favicon.svg",
-    sameAs: [
-      "https://www.linkedin.com/company/fyrix-tech",
-      "https://twitter.com/FyrixTech",
-      "https://www.instagram.com/fyrix.tech",
-    ],
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: "+91-9876543210",
-        contactType: "Customer Support",
-        areaServed: "IN",
-        availableLanguage: ["English", "Tamil"],
-      },
-    ],
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Coimbatore, Tamil Nadu",
-      addressLocality: "Coimbatore",
-      addressRegion: "TN",
-      postalCode: "641001",
-      addressCountry: "IN",
-    },
-  }),
-};
-
 export default function Home() {
+  // Define structured data inside the component
+  const structuredData = {
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Fyrix Technologies",
+      url: "https://www.fyrix.tech",
+      logo: "https://www.fyrix.tech/images/logo/favicon.svg",
+      sameAs: [
+        "https://www.linkedin.com/company/fyrix-tech",
+        "https://twitter.com/FyrixTech",
+        "https://www.instagram.com/fyrix.tech",
+      ],
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+91-9876543210",
+          contactType: "Customer Support",
+          areaServed: "IN",
+          availableLanguage: ["English", "Tamil"],
+        },
+      ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Coimbatore, Tamil Nadu",
+        addressLocality: "Coimbatore",
+        addressRegion: "TN",
+        postalCode: "641001",
+        addressCountry: "IN",
+      },
+    }),
+  };
+
   return (
     <>
       <Hero />
